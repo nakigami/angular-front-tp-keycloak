@@ -1,0 +1,16 @@
+<div class="mt-4 alert alert-success"
+     *ngIf="forbidden">
+  {{ forbidden }}
+</div>
+<table class="table table-striped">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+  <tr *ngFor="let supplier of suppliers?._embedded.suppliers">
+    <td>{{ supplier.id }}</td>
+    <td>{{ supplier.name }}</td>
+    <td>{{ supplier.email }}</td>
+  </tr>
+</table>
